@@ -205,7 +205,6 @@ def show_report_form():
     description = st.text_area(
         "Describe the issue in your own words (be as specific as possible)",
         placeholder="E.g., The dal had a strange taste and looked discolored. There might have been something in it.",
-        min_chars=10,
         key="complaint_text"
     )
     
