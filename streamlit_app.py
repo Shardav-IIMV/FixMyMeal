@@ -16,7 +16,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Custom CSS
+# Custom CSS - Theme aware styling
 st.markdown("""
     <style>
     .main {
@@ -38,42 +38,53 @@ st.markdown("""
         font-size: 1.1em;
         opacity: 0.9;
     }
+    /* Issue cards - use borders instead of light backgrounds */
     .issue-card {
         border-left: 4px solid #667eea;
+        border-top: 1px solid #667eea;
+        border-right: 1px solid #667eea;
+        border-bottom: 1px solid #667eea;
         padding: 15px;
         margin: 10px 0;
         border-radius: 5px;
-        background-color: #f8f9fa;
+        opacity: 0.95;
     }
+    /* Severity labels - use colors with good contrast in both themes */
     .severity-critical {
-        color: #dc3545;
+        color: #e74c3c;
         font-weight: bold;
     }
     .severity-high {
-        color: #fd7e14;
+        color: #e67e22;
         font-weight: bold;
     }
     .severity-medium {
-        color: #ffc107;
+        color: #f39c12;
         font-weight: bold;
     }
     .severity-low {
-        color: #28a745;
+        color: #27ae60;
         font-weight: bold;
     }
+    /* Menu items - no background, inherit theme */
     .menu-item {
-        background-color: #f0f2f6;
         padding: 10px;
         margin: 5px 0;
         border-radius: 5px;
         font-size: 0.9em;
+        border-left: 3px solid #667eea;
+        padding-left: 12px;
     }
+    /* AI analysis box - use border styling instead of colored background */
     .ai-analysis-box {
-        background-color: #e8f4f8;
         padding: 15px;
         border-left: 4px solid #0099cc;
+        border-top: 1px solid #0099cc;
+        border-right: 1px solid #0099cc;
+        border-bottom: 1px solid #0099cc;
         border-radius: 5px;
         margin: 10px 0;
+        opacity: 0.95;
     }
     </style>
 """, unsafe_allow_html=True)
